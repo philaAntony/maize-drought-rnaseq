@@ -1,0 +1,13 @@
+name: maize-rnaseq
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - fastp
+  - fastqc
+  - multiqc
+  - pigz
+  - salmon
+  - sra-tools
+
+prefix: "/home/phila/miniforge3/envs/maize-rnaseq"
