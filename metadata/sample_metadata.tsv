@@ -1,0 +1,37 @@
+sample_id	gsm	condition	water_potential_MPa	replicate	run
+WW_1	GSM3688038	well-watered	-0.02	1	SRR8788496
+WW_1	GSM3688038	well-watered	-0.02	1	SRR8788497
+WW_1	GSM3688038	well-watered	-0.02	1	SRR8788498
+WW_1	GSM3688038	well-watered	-0.02	1	SRR8788499
+WW_2	GSM3688039	well-watered	-0.02	2	SRR8788500
+WW_2	GSM3688039	well-watered	-0.02	2	SRR8788501
+WW_2	GSM3688039	well-watered	-0.02	2	SRR8788502
+WW_2	GSM3688039	well-watered	-0.02	2	SRR8788503
+WW_3	GSM3688040	well-watered	-0.02	3	SRR8788504
+WW_3	GSM3688040	well-watered	-0.02	3	SRR8788505
+WW_3	GSM3688040	well-watered	-0.02	3	SRR8788506
+WW_3	GSM3688040	well-watered	-0.02	3	SRR8788507
+MILD_1	GSM3688041	mild water deficit	-0.3	1	SRR8788508
+MILD_1	GSM3688041	mild water deficit	-0.3	1	SRR8788509
+MILD_1	GSM3688041	mild water deficit	-0.3	1	SRR8788510
+MILD_1	GSM3688041	mild water deficit	-0.3	1	SRR8788511
+MILD_2	GSM3688042	mild water deficit	-0.3	2	SRR8788512
+MILD_2	GSM3688042	mild water deficit	-0.3	2	SRR8788513
+MILD_2	GSM3688042	mild water deficit	-0.3	2	SRR8788514
+MILD_2	GSM3688042	mild water deficit	-0.3	2	SRR8788515
+MILD_3	GSM3688043	mild water deficit	-0.3	3	SRR8788516
+MILD_3	GSM3688043	mild water deficit	-0.3	3	SRR8788517
+MILD_3	GSM3688043	mild water deficit	-0.3	3	SRR8788518
+MILD_3	GSM3688043	mild water deficit	-0.3	3	SRR8788519
+SEV_1	GSM3688044	severe water deficit	-1.6	1	SRR8788520
+SEV_1	GSM3688044	severe water deficit	-1.6	1	SRR8788521
+SEV_1	GSM3688044	severe water deficit	-1.6	1	SRR8788522
+SEV_1	GSM3688044	severe water deficit	-1.6	1	SRR8788523
+SEV_2	GSM3688045	severe water deficit	-1.6	2	SRR8788524
+SEV_2	GSM3688045	severe water deficit	-1.6	2	SRR8788525
+SEV_2	GSM3688045	severe water deficit	-1.6	2	SRR8788526
+SEV_2	GSM3688045	severe water deficit	-1.6	2	SRR8788527
+SEV_3	GSM3688046	severe water deficit	-1.6	3	SRR8788528
+SEV_3	GSM3688046	severe water deficit	-1.6	3	SRR8788529
+SEV_3	GSM3688046	severe water deficit	-1.6	3	SRR8788530
+SEV_3	GSM3688046	severe water deficit	-1.6	3	SRR8788531
