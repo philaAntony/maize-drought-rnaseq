@@ -11,8 +11,8 @@ RNA-seq analysis of drought stress in maize: QC, quantification with Salmon, dif
 ## Quantification (Week 6)
 - **Tool:** Salmon, quasi-mapping against the Ensembl Plants release 63 cDNA (k = 31; reads are 75 bp, single-end).
 - **Library type:** unstranded (`U`) in all 36 samples, detected automatically with `-l A`.
-- **Mapping rate:** about 90% [add the range across all 36 samples once you've checked].
-- **Output:** gene-level counts matrix (`counts_matrix.csv`), built with tximport using `reference/tx2gene.tsv`. [add dimensions, e.g. N genes x 36 samples]
+- **Mapping rate:** LOW to HIGH across all 36 samples.
+- **Output:** gene-level counts matrix (`counts_matrix.csv`), built with tximport using `reference/tx2gene.tsv`. NGENES genes x 36 samples.
 - **Scripts:** `04_build_index.sh`, `05_quantify.sh`, `06_counts_matrix.R`.
 
 ### Counts vs TPM
