@@ -1,13 +1,16 @@
 name: maize-rnaseq
 channels:
-  - bioconda
   - conda-forge
 dependencies:
-  - fastp
+  - sra-tools
   - fastqc
   - multiqc
-  - pigz
+  - fastp
   - salmon
-  - sra-tools
-
-prefix: "/home/phila/miniforge3/envs/maize-rnaseq"
+  - pigz
+  - r-base
+  - bioconductor-tximport
+  - bioconductor-deseq2
+  - r-jsonlite
+  - r-readr
+prefix: /home/phila/miniforge3/envs/maize-rnaseq
