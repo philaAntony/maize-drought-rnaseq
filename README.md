@@ -2,6 +2,8 @@
 
 RNA-seq analysis of drought stress in maize: QC, quantification with Salmon, differential expression with DESeq2, and functional interpretation.
 
+**Status:** QC, trimming, quantification and differential expression (DESeq2) are complete. Functional interpretation (volcano plots, GO/KEGG enrichment) is in progress.
+
 ## Reference
 - Source: Ensembl Plants release 63
 - Assembly: Zm-B73-REFERENCE-NAM-5.0
@@ -9,10 +11,10 @@ RNA-seq analysis of drought stress in maize: QC, quantification with Salmon, dif
 - Check: all 72,539 FASTA transcripts are in the GTF; the 4,802 extra GTF entries are misc_non_coding RNAs, so counts cover protein-coding genes only.
 
 ## Quantification (Week 6)
-- **Tool:** Salmon, quasi-mapping against the Ensembl Plants release 63 cDNA (k = 31; reads are 75 bp, single-end).
-- **Library type:** unstranded (`U`) in all 36 samples, detected automatically with `-l A`.
+- **Tool:** Salmon, selective alignment (`--validateMappings`) against the Ensembl Plants release 63 cDNA (k = 31; reads are 75 bp, single-end).
+- **Library type:** unstranded (`U`) in all 36 runs, detected automatically with `-l A`.
 - **Mapping rate:** 90.2% to 91.5% across all 36 runs.
-- **Output:** gene-level counts matrix (`counts_matrix.csv`), built with tximport using `reference/tx2gene.tsv`. NGENES genes x 36 samples.
+- **Output:** gene-level counts matrix (`counts_matrix.csv`), built with tximport using `reference/tx2gene.tsv`. 39091 genes x 36 runs (summed to 9 samples in Week 7).
 - **Scripts:** `04_build_index.sh`, `05_quantify.sh`, `06_counts_matrix.R`.
 
 ### Counts vs TPM
@@ -34,6 +36,12 @@ DESeq2 takes raw (estimated) counts rather than TPM. It models counts with a neg
 ### Quality control
 PCA of variance-stabilised counts (top 500 genes) separates the three conditions along PC1 (88.6% of variance), ordered by water potential: well-watered, mild, severe. PC2 explains 7.7%. Replicates cluster within conditions. One severe replicate (SEV_2) lies further along PC1 than the other two, with normal mapping quality (90.3%), so it was retained.
 
-### Limitations
+### Limitations of the differential expression analysis
 - With 3 replicates and half the transcriptome changing in the severe comparison, a large number of genes reach significance, so a fold-change threshold is applied in the interpretation step.
 - DESeq2 assumes most genes do not change, which is strained when a large fraction of genes respond.
+
+## Data
+- **Study:** [Water-deficit responsive microRNAs in the primary root growth zone of Maize, BMC Plant Biology, from the GEO page for GSM3688038]
+- **Accession:** GEO samples GSM3688038 to GSM3688046; SRA runs SRR8788496 to SRR8788531.
+- **Design:** maize (B73 reference) under three water regimes: well-watered (-0.02 MPa), mild water deficit (-0.3 MPa) and severe water deficit (-1.6 MPa), with 3 biological replicates each.
+- **Sequencing:** 75 bp single-end reads; each biological sample was sequenced in 4 runs (36 runs in total).
