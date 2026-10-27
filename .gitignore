@@ -8,3 +8,4 @@ quants/
 reference/*.fa
 reference/*.gz
 salmon_index/
+results/dds.rds
