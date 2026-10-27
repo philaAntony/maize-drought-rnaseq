@@ -1,0 +1,10 @@
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.sra
+data/
+logs/
+quants/
+reference/*.fa
+reference/*.gz
+salmon_index/
