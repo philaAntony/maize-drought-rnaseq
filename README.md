@@ -45,3 +45,9 @@ PCA of variance-stabilised counts (top 500 genes) separates the three conditions
 - **Accession:** GEO samples GSM3688038 to GSM3688046; SRA runs SRR8788496 to SRR8788531.
 - **Design:** maize (B73 reference) under three water regimes: well-watered (-0.02 MPa), mild water deficit (-0.3 MPa) and severe water deficit (-1.6 MPa), with 3 biological replicates each.
 - **Sequencing:** 75 bp single-end reads; each biological sample was sequenced in 4 runs (36 runs in total).
+
+### Filtered gene lists (Week 8)
+Genes were called differentially expressed at adjusted p < 0.05 and |log2 fold change| >= 1 (`scripts/08_volcano_heatmap.R`):
+- Mild vs well-watered: 506 up, 289 down.
+- Severe vs well-watered: 3,402 up, 693 down.
+Fold changes are not shrunken, so values for low-count genes may be inflated. Volcano plots and a heatmap of the top 50 genes are in `figures/`.
