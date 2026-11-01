@@ -9,3 +9,5 @@ reference/*.fa
 reference/*.gz
 salmon_index/
 results/dds.rds
+reference/pannzer_B73.out
+reference/pannzer_B73.out
