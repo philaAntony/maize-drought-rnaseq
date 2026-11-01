@@ -51,3 +51,6 @@ Genes were called differentially expressed at adjusted p < 0.05 and |log2 fold c
 - Mild vs well-watered: 506 up, 289 down.
 - Severe vs well-watered: 3,402 up, 693 down.
 Fold changes are not shrunken, so values for low-count genes may be inflated. Volcano plots and a heatmap of the top 50 genes are in `figures/`.
+
+### Robustness check (SEV_2)
+SEV_2 was the most extreme severe replicate on the PCA. To check that it does not drive the severe vs well-watered result, the model was refit with each severe replicate removed in turn (`scripts/09_robustness_sev2.R`, results in `results/robustness_leave_one_out.csv`). [The percentage of up- and down-regulated genes retained when SEV_2 is dropped, compared with SEV_1 and SEV_3 is down by roughly 10 points for down-genes and and roughly 12 points up-genes.]
