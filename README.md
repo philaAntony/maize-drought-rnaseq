@@ -68,3 +68,12 @@ Many GO terms share the same genes, so related terms were interpreted as themes 
 - GO annotations are computational predictions, so enriched terms are hypotheses rather than evidence of mechanism.
 - 24.3% of tested genes had no annotation at the chosen confidence cutoff.
 - Adjusted p-values are corrected within each gene list and ontology, not across all analyses.
+
+### Interpretation (Week 8)
+- **Water and ABA signalling:** genes up-regulated under severe stress are enriched for responses to water, osmotic stress and abscisic acid, which fits the known role of ABA in drought. Salt and osmotic terms also appear in the mild comparison, so the osmotic response starts early.
+- **Secondary metabolism and the cell wall:** phenylpropanoid, lignin and terpenoid metabolism are up, while xyloglucan metabolism and cell wall organisation are down in severe stress. This is consistent with a shift from growth-related wall remodelling towards stiffer, lignified walls, though the enrichment does not show this directly.
+- **Peroxidase-driven redox terms:** the down-regulated "hydrogen peroxide", "oxidative stress" and "detoxification" terms are driven by peroxidase genes. Many maize peroxidases are class III, which act in the cell wall as well as in antioxidant defence, so these terms should not be read as reduced antioxidant capacity. Members of this family probably respond in both directions.
+- **Nitrate transport** terms are down in both comparisons, and amino acid and carbohydrate transport terms are up in severe stress.
+- **Photosynthesis-related terms were not significantly enriched** in any list. This does not mean those genes did not change, only that they were not over-represented among genes passing the thresholds.
+
+These are hypotheses from predicted annotations, and the tissue and sampling time of the study should be considered before drawing physiological conclusions.
