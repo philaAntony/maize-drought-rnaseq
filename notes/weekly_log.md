@@ -8,3 +8,7 @@
 - **Did:** collapsed 36 sequencing runs into 9 biological samples, ran DESeq2 (mild and severe vs well-watered), made PCA, distance heatmap and MA plots.
 - **Broke:** missing R packages (jsonlite); only found that the 36 SRR runs were technical replicates by reading the metadata before analysing.
 - **Learned:** technical runs must be summed, not treated as replicates; PC1 (88.6%) tracked the water potential gradient; SEV_2 is the most extreme severe replicate but has normal mapping quality, so it was kept.
+
+## Week 8 (so far): Filtered lists and robustness
+- **Did:** applied |log2FC| >= 1 with padj < 0.05, made volcano plots and a heatmap, ran a leave-one-out check on SEV_2.
+- **Learned:** a fold-change threshold cut the severe list from 13,729 to 4,095 genes; SEV_2 has the largest influence on the severe result, yet 78% to 82% of genes hold without it.
