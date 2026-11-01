@@ -54,3 +54,17 @@ Fold changes are not shrunken, so values for low-count genes may be inflated. Vo
 
 ### Robustness check (SEV_2)
 SEV_2 was the most extreme severe replicate on the PCA. To check that it does not drive the severe vs well-watered result, the model was refit with each severe replicate removed in turn (`scripts/09_robustness_sev2.R`, results in `results/robustness_leave_one_out.csv`). Removing SEV_2 retained 78.1% of up-regulated and 82.0% of down-regulated genes, compared with 93.0% and 91.2% when SEV_1 was removed and 91.4% and 90.9% when SEV_3 was removed. Fold changes stayed highly correlated in all three refits (Spearman 0.974 to 0.988). SEV_2 therefore contributes more to the severe signal than the other replicates, but it does not drive the result, and it was retained. Each refit has only two severe replicates, so some loss of power is expected.
+
+### Functional enrichment (Week 8)
+GO enrichment (`scripts/10_go_enrichment.R`) was run separately for up- and down-regulated genes in each comparison against the 26,120 tested genes as background. Annotations are MaizeGDB Pannzer ARGOT predictions for B73 v5 (PPV >= 0.5), with parent terms added; 19,765 of the tested genes (75.7%) had at least one term. Significant terms: adjusted p < 0.05.
+
+- **Severe water deficit, up-regulated:** responses to water, osmotic stress, abscisic acid and salt; phenylpropanoid, lignin, terpenoid and isoprenoid metabolism; amino acid and carbohydrate transport.
+- **Severe water deficit, down-regulated:** hydrogen peroxide and ROS metabolism, detoxification, nitrate transport, xyloglucan metabolism and cell wall organisation.
+- **Mild water deficit:** a partly overlapping but smaller response, with glutathione and sulfur metabolism and xenobiotic export up, and peroxide, detoxification and nitrate terms down.
+
+Many GO terms share the same genes, so related terms were interpreted as themes rather than counted as independent findings.
+
+### Limitations of the enrichment analysis
+- GO annotations are computational predictions, so enriched terms are hypotheses rather than evidence of mechanism.
+- 24.3% of tested genes had no annotation at the chosen confidence cutoff.
+- Adjusted p-values are corrected within each gene list and ontology, not across all analyses.
