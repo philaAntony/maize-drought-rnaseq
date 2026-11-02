@@ -41,7 +41,9 @@ PCA of variance-stabilised counts (top 500 genes) separates the three conditions
 - DESeq2 assumes most genes do not change, which is strained when a large fraction of genes respond.
 
 ## Data
-- **Study:** [Water-deficit responsive microRNAs in the primary root growth zone of Maize, BMC Plant Biology, from the GEO page for GSM3688038]
+- **Study:** GEO series GSE128896, changes in the maize (B73) 1-cm primary root growth zone transcriptome under mild or severe water-deficit stress.
+- **Tissue and timing:** primary root growth zone of seedlings, sampled 26 hours after the water deficit treatments began.
+- **Related publication:** the same experimental system (B73 seedlings at -0.02, -0.3 and -1.6 MPa for 26 h) is studied in Seeve et al. (2019), *BMC Plant Biology*, doi:10.1186/s12870-019-2037-y. GEO lists no linked publication for GSE128896.
 - **Accession:** GEO samples GSM3688038 to GSM3688046; SRA runs SRR8788496 to SRR8788531.
 - **Design:** maize (B73 reference) under three water regimes: well-watered (-0.02 MPa), mild water deficit (-0.3 MPa) and severe water deficit (-1.6 MPa), with 3 biological replicates each.
 - **Sequencing:** 75 bp single-end reads; each biological sample was sequenced in 4 runs (36 runs in total).
