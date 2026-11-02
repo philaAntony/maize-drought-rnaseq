@@ -17,3 +17,7 @@
 - **Did:** applied a fold-change threshold, made volcano plots and a heatmap, ran a leave-one-out check on SEV_2, built a gene-to-GO table from MaizeGDB Pannzer predictions, and ran GO enrichment on up and down lists.
 - **Broke:** BioMart returned HTTP 405 and a browser export never downloaded; switched to a file download from MaizeGDB.
 - **Learned:** enrichment terms overlap heavily so they must be grouped into themes; redox terms turned out to be peroxidase-driven and are ambiguous without looking at the genes; "not enriched" is not the same as "not changed".
+
+## Week 9: Reproducibility
+- **Did:** restructured the README, fixed the environment file, wrote run_all.sh and helper scripts, and reran the workflow from a fresh clone.
+- **Learned:** manual terminal steps must become scripts or they cannot be reproduced; a reproduction test finds problems a normal run hides; the rerun gave identical counts, DESeq2 results, gene lists and GO terms.
