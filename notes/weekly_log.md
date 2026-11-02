@@ -21,3 +21,8 @@
 ## Week 9: Reproducibility
 - **Did:** restructured the README, fixed the environment file, wrote run_all.sh and helper scripts, and reran the workflow from a fresh clone.
 - **Learned:** manual terminal steps must become scripts or they cannot be reproduced; a reproduction test finds problems a normal run hides; the rerun gave identical counts, DESeq2 results, gene lists and GO terms.
+
+## Week 9: Reproducibility
+- **Did:** restructured the README, fixed the environment file, wrote run_all.sh and helper scripts, and reran the workflow from a fresh clone.
+- **Broke:** the first environment file lacked the bioconda channel and several R packages; the first reproduction attempt stopped silently because wget -q hid a download error.
+- **Learned:** manual terminal steps must become scripts or they cannot be reproduced; a reproduction test finds problems a normal run hides; the rerun gave identical counts, DESeq2 results, gene lists and GO terms.

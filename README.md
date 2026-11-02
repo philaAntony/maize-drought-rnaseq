@@ -95,7 +95,7 @@ conda env create -f environment.yml
 conda activate maize-rnaseq
 bash scripts/run_all.sh
 ```
-`run_all.sh` downloads the Ensembl Plants release 63 reference (and checks that the FASTA and GTF match), the MaizeGDB GO annotations and the reads from SRA, then runs every script in the workflow table in order. Set `SKIP_DOWNLOAD=1` to skip the SRA download if the reads are already in `data/raw/`. Large files (raw reads, reference files, the Salmon index and per-run quantification output) are not stored in the repository. `environment.lock.yml` records the exact package versions used.
+`run_all.sh` downloads the Ensembl Plants release 63 reference (and checks that the FASTA and GTF match), the MaizeGDB GO annotations and the reads from SRA, then runs every script in the workflow table in order. It stops at the first error. Set `SKIP_DOWNLOAD=1` to skip the SRA download if the reads are already in `data/raw/`. Large files (raw reads, reference files, the Salmon index and per-run quantification output) are not stored in the repository, and `environment.lock.yml` records the exact package versions used.
 
 **Reproducibility check.** The workflow was rerun from a fresh clone in a new environment built from `environment.yml`, with the raw reads reused (the SRA download step was not retested). The counts matrix, the DESeq2 result tables, the gene lists and all GO enrichment term sets were identical to the original run (counts matrix: maximum absolute difference 0).
 
