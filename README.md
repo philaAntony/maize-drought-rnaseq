@@ -21,6 +21,7 @@ Differential expression and functional analysis of the maize (B73) primary root 
 ## Workflow
 | Script | Step |
 |---|---|
+| `00_download_reference.sh` | download the Ensembl release 63 reference and check FASTA against GTF |
 | `01_download.sh` | download reads from SRA |
 | `02_qc_raw.sh` | FastQC on raw reads |
 | `03_trim.sh` | fastp trimming, FastQC on trimmed reads, MultiQC |

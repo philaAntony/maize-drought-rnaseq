@@ -6,7 +6,9 @@ mkdir -p logs results figures reference
 
 step() { echo; echo "[$(date +%H:%M:%S)] $*"; }
 
-# Reference files must be in reference/ (Ensembl Plants release 63, see README)
+step "00 reference download";  bash scripts/00_download_reference.sh
+
+# Reference files must be present (downloaded above)
 for pat in "reference/*.cdna.all.fa.gz" "reference/*.gtf.gz"; do
   ls $pat >/dev/null 2>&1 || { echo "Missing $pat. Download the reference files first (see README)."; exit 1; }
 done
