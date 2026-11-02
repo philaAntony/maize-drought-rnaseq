@@ -52,12 +52,22 @@ Differential expression and functional analysis of the maize (B73) primary root 
 - **Quality control:** PCA of variance-stabilised counts (top 500 genes) separates the three conditions along PC1 (88.6% of variance), ordered by water potential: well-watered, mild, severe. PC2 explains 7.7%. Replicates cluster within conditions. One severe replicate (SEV_2) lies further along PC1 than the other two, with normal mapping quality (90.3%), so it was retained.
 - **Outputs:** results tables in `results/`, figures in `figures/`.
 
+<img src="figures/pca.png" alt="PCA of the nine samples" width="480">
+
+*PCA of variance-stabilised counts (top 500 genes). PC1 (88.6% of variance) orders the samples by water potential.*
+
+
 ### Filtered gene lists
 Genes were called differentially expressed at adjusted p < 0.05 and |log2 fold change| >= 1 (`08_volcano_heatmap.R`):
 - Mild vs well-watered: 506 up, 289 down.
 - Severe vs well-watered: 3,402 up, 693 down.
 
 Volcano plots and a heatmap of the top 50 genes are in `figures/`.
+
+<img src="figures/volcano_severe.water.deficit.png" alt="Volcano plot, severe water deficit vs well-watered" width="480">
+
+*Severe water deficit vs well-watered. Coloured points pass adjusted p < 0.05 and |log2 fold change| >= 1.*
+
 
 ### Robustness check (SEV_2)
 SEV_2 was the most extreme severe replicate on the PCA. To check that it does not drive the severe vs well-watered result, the model was refit with each severe replicate removed in turn (`09_robustness_sev2.R`, results in `results/robustness_leave_one_out.csv`). Removing SEV_2 retained 78.1% of up-regulated and 82.0% of down-regulated genes, compared with 93.0% and 91.2% when SEV_1 was removed and 91.4% and 90.9% when SEV_3 was removed. Fold changes stayed highly correlated in all three refits (Spearman 0.974 to 0.988). SEV_2 therefore contributes more to the severe signal than the other replicates, but it does not drive the result, and it was retained.
