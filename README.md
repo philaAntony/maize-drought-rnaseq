@@ -26,10 +26,12 @@ Differential expression and functional analysis of the maize (B73) primary root 
 | `03_trim.sh` | fastp trimming, FastQC on trimmed reads, MultiQC |
 | `04_build_index.sh` | Salmon index and transcript-to-gene table |
 | `05_quantify.sh` | Salmon quantification of all 36 runs |
+| `05b_mapping_rates.sh` | mapping rate of every run |
 | `06_counts_matrix.R` | gene-level counts matrix with tximport |
 | `07_deseq2.R` | DESeq2 (runs summed to 9 samples), PCA, distance heatmap, MA plots |
 | `08_volcano_heatmap.R` | fold-change filtered gene lists, volcano plots, heatmap |
 | `09_robustness_sev2.R` | leave-one-out check on the SEV_2 replicate |
+| `10a_export_gene_lists.R` | gene lists and background for enrichment |
 | `10_go_enrichment.R` | GO enrichment of up- and down-regulated genes |
 
 ## Methods and results
