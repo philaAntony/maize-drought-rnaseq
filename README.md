@@ -74,6 +74,6 @@ Many GO terms share the same genes, so related terms were interpreted as themes 
 - **Secondary metabolism and the cell wall:** phenylpropanoid, lignin and terpenoid metabolism are up, while xyloglucan metabolism and cell wall organisation are down in severe stress. This is consistent with a shift from growth-related wall remodelling towards stiffer, lignified walls, though the enrichment does not show this directly.
 - **Peroxidase-driven redox terms:** the down-regulated "hydrogen peroxide", "oxidative stress" and "detoxification" terms are driven by peroxidase genes. Many maize peroxidases are class III, which act in the cell wall as well as in antioxidant defence, so these terms should not be read as reduced antioxidant capacity. In the severe comparison, 22 genes with a peroxidase annotation were up-regulated and 20 were down-regulated (counted by gene description, so this mixes peroxidase types), so members of this family respond in both directions.
 - **Nitrate transport** terms are down in both comparisons, and amino acid and carbohydrate transport terms are up in severe stress.
-- **Photosynthesis-related terms were not significantly enriched** in any list. This does not mean those genes did not change, only that they were not over-represented among genes passing the thresholds.
+- **Photosynthesis-related terms were not enriched**, as expected for root tissue.
 
-These are hypotheses from predicted annotations, and the tissue and sampling time of the study should be considered before drawing physiological conclusions.
+These are hypotheses from predicted annotations. The samples are root growth zones at 26 hours, so the results describe the early response of the root tip and should not be extended to leaves or to longer-term acclimation.
